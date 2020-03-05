@@ -4,7 +4,7 @@ Text search routine for the ePubJS project. Searches text (case insensitive) on 
 code:
 
 ```
-searchAction(search_text, hog_tie){// 'hog_tie' toggles between SearchChapter and SearchBook
+searchAction(search_text, hog_tie){// 'hog_tie' toggles between 'SearchChapter' and 'SearchBook'
     
   this.searchResult = [];
       
