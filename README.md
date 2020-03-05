@@ -22,11 +22,10 @@ searchAction(search_text, hog_tie){// 'hog_tie' toggles between SearchChapter an
           let foo = search_text; //'produce';
           let regExp = new RegExp("\\b" + foo + "\\b", "i"); // the word 'foo'
           return regExp.test(node.data);
-        });//For example, the following will obtain all the text nodes within the document body that contain the word "foo", case insensitively:
+        });//the above will obtain all the text nodes within the document body that contain the word in the variable "foo", case insensitively:
         
         var found: any = [], itemx: any = {}, itemers: any = [];
         textNodes.forEach(textNode => {
-          ///console.log('new spine: (rangy-textnodes) '+JSON.stringify(textNode.textContent,null,2));
           found.push(textNode);
         });
         itemx[item.href] = found;
@@ -51,8 +50,6 @@ searchAction(search_text, hog_tie){// 'hog_tie' toggles between SearchChapter an
 
                   let mcontents = this.ePub.movingContentOBJECT[itemer];//this.ePub.currentHref
                   var searchCFI = mcontents.cfiFromRange( reSrange );
-                  console.log('inspect:3X '+foundx.textContent );
-                  console.log('post_pageCFI: c '+searchCFI.toString());
 
                   this.searchResult.push({
                     href: itemer,//this.ePub.currentHref
@@ -68,8 +65,8 @@ searchAction(search_text, hog_tie){// 'hog_tie' toggles between SearchChapter an
             }
           }//hog_tie
         }//itemers
+        
         return resolve(this.searchResult);
-        // console.log("selected: "+cfiRange); //series.001 -> epubcfi(/6/2[cover]!/4/2/16,/1:8,/1:11), Template -> epubcfi(/6/2[cover]!/4/2/12,/1:5,/1:13)
   
       });
     });
