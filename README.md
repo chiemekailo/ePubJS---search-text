@@ -64,11 +64,11 @@ searchAction(search_text, hog_tie){// 'hog_tie' toggles between SearchChapter an
                 }//while
 
               });
-              return resolve(this.searchResult);
               
             }
           }//hog_tie
         }//itemers
+        return resolve(this.searchResult);
         // console.log("selected: "+cfiRange); //series.001 -> epubcfi(/6/2[cover]!/4/2/16,/1:8,/1:11), Template -> epubcfi(/6/2[cover]!/4/2/12,/1:5,/1:13)
   
       });
