@@ -1,6 +1,6 @@
 # ePubJS---search-text
 Text search routine for the ePubJS project. Searches text (case insensitive) on per text-node basis.
-It uses the 'rangy' plugin, installed via npm.
+**_It uses the 'rangy' plugin, installed via npm._**
 
 code:
 
